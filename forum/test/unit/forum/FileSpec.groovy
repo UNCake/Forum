@@ -54,7 +54,7 @@ class FileSpec extends Specification {
         p.validate()
 
         when: 'size de 70 MB'
-        p = p = new File(fileType: 'algo', size: 7000)
+        p = new File(fileType: 'algo', size: 7000)
 
         then: 'La validacion debe ser incorrecta'
         !p.validate()
