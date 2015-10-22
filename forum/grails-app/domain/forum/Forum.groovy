@@ -1,15 +1,15 @@
 package forum
 
-class Forum{
+class Forum {
 
-String name
-Date dateCreated
-String category
+    String name
+    Date dateCreated
+    String category
 
-static constraints = {
-  name nullable: false, size: 3..20, unique: true
-  dateCreated nullable: false, min: new Date()
-  category nullable: false, size: 3..15
-}
+    static constraints = {
+        name nullable: false, size: 3..20, unique: true
+        dateCreated nullable: false, min: new Date()
+        category nullable: false, size: 3..15
+    }
 
 }
