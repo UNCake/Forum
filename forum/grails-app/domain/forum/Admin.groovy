@@ -7,6 +7,11 @@ class Admin extends User {
 
     static hasMany = [forumsToMod:Forum]
 
+    def c = Admin.createCriteria()
+    def results = c.list {
+        order("level", "desc")
+    }
+
     static constraints = {
         level nullable: false, range: 1..5
         rating nullable: false, range: 0..100
