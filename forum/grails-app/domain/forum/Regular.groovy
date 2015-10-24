@@ -6,6 +6,11 @@ class Regular extends User {
     Integer strikesNumber
     Integer starsNumber
 
+    static hasMany = [posts:Post]
+
+    static mapping = {
+        posts cascade: 'all-delete-orphan'
+    }
 
     static constraints = {
         postViews nullable: false, blank: true
