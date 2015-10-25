@@ -11,8 +11,8 @@ class Post {
     static belongsTo = [parentforum:Forum, user:Regular]
 
     static mapping = {
-        parentforum column: "fatherForum_id"
-        user column: "owner_id"
+        parentforum key: "fatherForum_id"
+        user key: "owner_id"
     }
 
     static constraints = {

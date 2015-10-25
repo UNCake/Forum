@@ -8,7 +8,7 @@ class File {
     static belongsTo = [parentPost: Post]
 
     static mapping = {
-        parentPost column: "post_belongs_id"
+        parentPost key: "post_belongs_id"
     }
 
     static constraints = {
