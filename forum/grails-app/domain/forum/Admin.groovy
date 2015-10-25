@@ -4,7 +4,6 @@ class Admin extends User {
 
     Integer level
     Double rating
-
     static hasMany = [forumsToMod:Forum]
 
     def c = Admin.createCriteria()
