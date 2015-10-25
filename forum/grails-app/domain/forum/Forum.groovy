@@ -14,4 +14,8 @@ class Forum {
         category nullable: false, size: 3..15
     }
 
+    def beforeInsert() {
+        dateCreated = new Date()
+    }
+
 }

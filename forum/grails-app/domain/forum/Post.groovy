@@ -22,4 +22,12 @@ class Post {
         itsAllowed nullable: false
     }
 
+    def beforeInsert() {
+        dateCreated = new Date()
+    }
+
+    def beforeUpdate() {
+        lastupdate = new Date()
+    }
+
 }

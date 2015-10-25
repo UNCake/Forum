@@ -16,5 +16,4 @@ class File {
         content nullable: false
         size nullable: false, max: 10000
     }
-
 }
