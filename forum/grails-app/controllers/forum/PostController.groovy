@@ -13,11 +13,11 @@ class PostController {
     }
 
     def index() {
-        render Post.list() as JSON
+        redirect action: "list"
     }
 
     def list(){
-
+        render Post.list() as JSON
     }
 
     def comment(){

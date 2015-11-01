@@ -13,11 +13,11 @@ class AdminController {
     }
 
     def index() {
-        render Admin.list() as JSON
+        redirect action: "list"
     }
 
     def list(){
-        log.debug( [ Admin: Admin.get(params) ] )
+        render Admin.list() as JSON
     }
 
     def create(){

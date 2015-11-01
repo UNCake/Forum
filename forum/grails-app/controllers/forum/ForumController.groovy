@@ -13,11 +13,11 @@ class ForumController {
     }
 
     def index() {
-        render Forum.list() as JSON
+        redirect action: "list"
     }
 
     def list(){
-
+        render Forum.list() as JSON
     }
 
     def create(){

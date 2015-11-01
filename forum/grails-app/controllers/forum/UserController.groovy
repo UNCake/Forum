@@ -13,11 +13,11 @@ class UserController {
     }
 
     def index() {
-        render User.list() as JSON
+        redirect action: "list"
     }
 
     def list(){
-
+        render User.list() as JSON
     }
 
     def create(){

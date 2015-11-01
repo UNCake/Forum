@@ -25,11 +25,11 @@ class FileController {
     }
 
     def index() {
-        render File.list() as JSON
+        redirect action: "list"
     }
 
     def list(){
-
+        render File.list() as JSON
     }
 
     def create(){

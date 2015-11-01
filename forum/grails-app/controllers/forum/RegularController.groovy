@@ -13,11 +13,11 @@ class RegularController {
     }
 
     def index() {
-        render Regular.list() as JSON
+        redirect action: "list"
     }
 
     def list(){
-
+        render Regular.list() as JSON
     }
 
     def create(){
