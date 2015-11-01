@@ -22,7 +22,7 @@ class RegularController {
         this.getActionName()
         try {
             def regular = new Regular(params)
-            regular.save
+            regular.save()
         }catch (Exception e) {
             log.error ('No se pudo crear', e)
         }
