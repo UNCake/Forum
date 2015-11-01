@@ -6,6 +6,10 @@ class PostController {
         log.trace("Se va a ejecutar la acción $actionName")
     }
 
+    def afterInterceptor = { model ->
+        log.trace("Se ha ejecutado la acción $actionName")
+    }
+
     def index() {
         redirect action: "list"
     }
