@@ -1,0 +1,43 @@
+package forum
+
+class PostController {
+
+    def index() {
+        redirect action: "list"
+    }
+
+    def list(){
+
+    }
+
+    def create(){
+        this.getActionName()
+        try {
+            def post = new Post(params)
+            post.save
+        }catch (Exception e) {
+            log.error ('No se pudo crear el Post', e)
+        }
+    }
+    def read(){
+        try {
+            render Post.findAll()
+        }catch (Exception e) {
+            log.error ('No se pudo leer el Post', e)
+        }
+    }
+    def update(){
+        try {
+
+        }catch (Exception e) {
+            log.error ('No se pudo actualizar', e)
+        }
+    }
+    def delete(){
+        try {
+
+        }catch (Exception e) {
+            log.error ('No se pudo borrar', e)
+        }
+    }
+}
