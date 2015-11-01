@@ -1,13 +1,25 @@
 package forum
 
 class FileController {
+    static contentTypes = ["text/plain": ".txt" , "image/png" :".png" ]
+
+    def share() {
+        render "Not implemented yet"
+    }
+
+    def download() {
+        def id = params.actualFile
+        def file = File.get(id)
+        render file: file.content, contentType: file.fileType
+    }
+
 
     def beforeInterceptor = {
-        log.trace("Se va a ejecutar la acción $actionName")
+        log.trace("Se va a ejecutar la acciï¿½n $actionName")
     }
 
     def afterInterceptor = { model ->
-        log.trace("Se ha ejecutado la acción $actionName")
+        log.trace("Se ha ejecutado la acciï¿½n $actionName")
     }
 
     def index() {
@@ -21,8 +33,13 @@ class FileController {
     def create(){
         this.getActionName()
         try {
-            def file = new File(params)
-            file.save
+            def upFile = request.getFile("myFile")
+            if(contentTypes.containsValue(upFile.getContentType())) {
+                def file = new File(params)
+                file.save()
+            }else {
+                log.error ('No se pudo crear el Archivo, tipo invalido')
+            }
         }catch (Exception e) {
             log.error ('No se pudo crear el Archivo', e)
         }
