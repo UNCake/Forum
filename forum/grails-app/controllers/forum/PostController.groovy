@@ -18,11 +18,23 @@ class PostController {
 
     }
 
+    def comment(){
+
+    }
+
+    def rate(){
+        def post = Post.findById(params.actualPost)
+    }
+
+    def share(){
+        render "No se ha implementado esta funcionalidad"
+    }
+
     def create(){
         this.getActionName()
         try {
             def post = new Post(params)
-            post.save
+            post.save()
         }catch (Exception e) {
             log.error ('No se pudo crear el Post', e)
         }

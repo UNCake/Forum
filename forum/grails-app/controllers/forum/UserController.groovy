@@ -22,7 +22,7 @@ class UserController {
         this.getActionName()
         try {
             def user = new User(params)
-            user.save
+            user.save()
         }catch (Exception e) {
             log.error ('No se pudo crear el usuario', e)
         }
