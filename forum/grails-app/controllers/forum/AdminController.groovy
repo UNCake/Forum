@@ -2,12 +2,16 @@ package forum
 
 class AdminController {
 
+    def beforeInterceptor = {
+        log.trace("Se va a ejecutar la acción $actionName")
+    }
+
     def index() {
         redirect action: "list"
     }
 
     def list(){
-
+        log.debug( [ Admin: Admin.get(params) ] )
     }
 
     def create(){

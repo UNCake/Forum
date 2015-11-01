@@ -2,6 +2,10 @@ package forum
 
 class FileController {
 
+    def beforeInterceptor = {
+        log.trace("Se va a ejecutar la acción $actionName")
+    }
+
     def index() {
         redirect action: "list"
     }
