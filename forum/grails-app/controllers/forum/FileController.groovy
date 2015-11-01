@@ -1,5 +1,7 @@
 package forum
 
+import grails.converters.JSON
+
 class FileController {
     static contentTypes = ["text/plain": ".txt" , "image/png" :".png" ]
 
@@ -23,7 +25,7 @@ class FileController {
     }
 
     def index() {
-        redirect action: "list"
+        render File.list() as JSON
     }
 
     def list(){

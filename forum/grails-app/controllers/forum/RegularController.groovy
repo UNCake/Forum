@@ -1,17 +1,19 @@
 package forum
 
+import grails.converters.JSON
+
 class RegularController {
 
     def beforeInterceptor = {
-        log.trace("Se va a ejecutar la acción $actionName")
+        log.trace("Se va a ejecutar la acciï¿½n $actionName")
     }
 
     def afterInterceptor = { model ->
-        log.trace("Se ha ejecutado la acción $actionName")
+        log.trace("Se ha ejecutado la acciï¿½n $actionName")
     }
 
     def index() {
-        redirect action: "list"
+        render Regular.list() as JSON
     }
 
     def list(){
