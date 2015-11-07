@@ -6,10 +6,10 @@ class Post {
     Date dateCreated
     Date lastupdate
     boolean itsAllowed
-    List<String> comments
+    List comments
     Integer rate
 
-    static hasMany = [files:File]
+    static hasMany = [files:File, comments:String]
     static belongsTo = [parentforum:Forum, user:Regular]
 
     static mapping = {
@@ -27,6 +27,7 @@ class Post {
 
     def beforeInsert() {
         dateCreated = new Date()
+        comments = new ArrayList<String>()
     }
 
     def beforeUpdate() {

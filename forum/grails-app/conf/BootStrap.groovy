@@ -9,9 +9,8 @@ class BootStrap {
                 level: 1, rating: 5)
 
         def forum = new Forum(name: "Controller 1", category: "Grails")
-        admin.addToForums(forum)
-
-        admin.save()
+        admin.addToForumsToMod(forum)
+        admin.save(flush: true)
 
         def post = new Post(topic: "A topic", itsAllowed: true, owner: user, forum: forum)
 
