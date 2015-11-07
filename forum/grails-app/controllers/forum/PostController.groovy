@@ -21,11 +21,15 @@ class PostController {
     }
 
     def comment(){
-
+        def post = Post.findById(params.actualPost)
+        post.comments.add(params.commentContent)
+        post.save()
     }
 
     def rate(){
         def post = Post.findById(params.actualPost)
+        post.rate += 1
+        post.save()
     }
 
     def share(){
