@@ -13,7 +13,8 @@ class AdminController {
     }
 
     def index() {
-        redirect action: "list"
+        //list()
+        //redirect action: "list"
     }
 
     def list(){
