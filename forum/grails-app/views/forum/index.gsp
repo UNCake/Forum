@@ -15,6 +15,11 @@
 </head>
 
 <body>
+<script>
+    function overlay() {
+        console.log("casa")
+    }
+</script>
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <div class="navbar-header page-scroll">
@@ -43,18 +48,18 @@
 
         <div class="row">
             <br><br><br>
-            <h3 style="color: #333;">Bienvenido</h3>
+            <h3 style="color: #333;">Foro</h3>
             <br><br>
         </div>
 
     </div>
 </header>
 <div class="row">
+
     <div class="col-sm-12" style="border-style: solid;">
         <div class="col-md-6" style="border-style: solid;"><br>Bienvenido Alejandro<br><br></div>
-        <div class="col-md-2" style="border-style: solid;"><br>Mi Perfil<br><br></div>
-        <div class="col-md-2" style="border-style: solid;"><br>Mis Posts<br><br></div>
-        <div class="col-md-2" style="border-style: solid;"><br>Logout<br><br></div>
+        <div class="col-md-3"><button style="display: block; width: 100%;" onclick="overlay()"><br>Crear<br><br></button></div>
+        <div class="col-md-3" style="border-style: solid;"><br>Consultar<br><br></div>
     </div>
 </div>
 <div class="row">
@@ -65,12 +70,12 @@
                 <br>
                 <p class="text-center">Bienvenido a la aplicación forum 2.0</p>
                 <br>
+                <g:link action="loadFile" controller="myController">Load File</g:link>
                 <p class="text-left" style="position: relative; left: 30px;">Consultar:</p>
-
-                <p class="text-left" href="forum" style="position: relative; left: 30px;"><g:link action="index" controller="forum">Foros</g:link></p>
-                <p class="text-left" href="forum" style="position: relative; left: 30px;"><g:link action="index" controller="forum">Usuarios</g:link></p>
-                <p class="text-left" href="forum" style="position: relative; left: 30px;"><g:link action="index" controller="forum">Entradas (Post)</g:link></p>
-                <p class="text-left" href="forum" style="position: relative; left: 30px;"><g:link action="index" controller="forum">Archivos</g:link></p>
+                <p class="text-left" href="forum" style="position: relative; left: 30px;">Foros</p>
+                <p class="text-left" style="position: relative; left: 30px;">Usuarios</p>
+                <p class="text-left" style="position: relative; left: 30px;">Entradas (Post)</p>
+                <p class="text-left" style="position: relative; left: 30px;">Archivos</p>
                 <br>
                 <br>
             </form>

@@ -13,7 +13,7 @@ class ForumController {
     }
 
     def index() {
-        redirect action: "list"
+        //redirect action: "list"
     }
 
     def list(){
