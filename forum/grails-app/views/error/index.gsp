@@ -58,9 +58,11 @@
     </div>
 </div>
 <div class="row">
-    <br>
-    <h1>Error. La pagina solicitada no existe.</h1>
-    <br>
+    <div class="col-sm-12" style="border-style: solid;">
+        <br>
+        <h1 class="text-center">Error. La pagina solicitada no existe.</h1>
+        <br>
+    </div>
 </div>
 <div class="row">
     <p class="text-center">Aplicación realizada por:</p>
