@@ -29,6 +29,7 @@ class ForumController {
         }catch (Exception e) {
             log.error ('No se pudo crear el Foro', e)
         }
+        redirect(controller: 'forum', action: 'index')
     }
     def read(){
         try {

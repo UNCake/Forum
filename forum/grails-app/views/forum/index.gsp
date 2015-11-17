@@ -70,20 +70,21 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-sm-12" id="createForm" style="border-style: solid;">
-        <g:form name="myForm" url="[controller:'forum',action:'create']" class="form-signin">
-            <h2 class="form-signin-heading " align="center">Crear Foro</h2>
-            <div class="form-group">
-                <label class="sr-only">Nombre</label>
-                <input type="text" class="form-control" placeholder="Nombre" required name="name">
-            </div>
-            <div class="form-group" >
-                <label class="sr-only">Categoria</label>
-                <input type="text" class="form-control" placeholder="Categoria" required name="category"  >
-            </div>
-            <button class="btn btn-lg btn-primary btn-block color-black" type="submit">Guardar</button>
-        </g:form>
-    </div>
+    <g:form name="myForm" url="[controller:'forum',action:'create']" class="form-signin">
+        <h2 class="form-signin-heading " align="center">Crear foro!</h2>
+        <div class="form-group" align="center" >
+            <label class="sr-only">Nombre</label>
+            <g:textField name="name" placeholder="Nombre"></g:textField>
+        </div>
+        <div class="form-group" align="center">
+            <label class="sr-only">Category</label>
+            <g:textField name="category" placeholder="Category"></g:textField>
+        </div>
+        <div class="form-group" align="center">
+            <g:actionSubmit value="Enviar" ></g:actionSubmit>
+        </div>
+    </g:form>
+
     <div class="col-sm-12" id="buscarForm" style="border-style: solid;">
         <div class="col-md-4 col-sm-6 portfolio-item">
             <table class="table table-bordered">
