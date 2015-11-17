@@ -13,7 +13,6 @@ class BootStrap {
         admin.save(flush: true)
 
         def post = new Post(topic: "A topic", itsAllowed: true, owner: user, forum: forum)
-
         post.save(flush: true)
     }
     def destroy = {

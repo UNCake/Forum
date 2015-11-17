@@ -25,7 +25,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand page-scroll" href="#page-top">UNCakeForum</a>
+            <a class="navbar-brand page-scroll" href="home">UNCakeForum</a>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -68,9 +68,9 @@
                 <p class="text-left" style="position: relative; left: 30px;">Consultar:</p>
 
                 <p class="text-left" href="forum" style="position: relative; left: 30px;"><g:link action="index" controller="forum">Foros</g:link></p>
-                <p class="text-left" href="forum" style="position: relative; left: 30px;"><g:link action="index" controller="forum">Usuarios</g:link></p>
-                <p class="text-left" href="forum" style="position: relative; left: 30px;"><g:link action="index" controller="forum">Entradas (Post)</g:link></p>
-                <p class="text-left" href="forum" style="position: relative; left: 30px;"><g:link action="index" controller="forum">Archivos</g:link></p>
+                <p class="text-left" href="forum" style="position: relative; left: 30px;"><g:link action="index" controller="user">Usuarios</g:link></p>
+                <p class="text-left" href="forum" style="position: relative; left: 30px;"><g:link action="index" controller="post">Entradas (Post)</g:link></p>
+                <p class="text-left" href="forum" style="position: relative; left: 30px;"><g:link action="index" controller="file">Archivos</g:link></p>
                 <br>
                 <br>
             </form>

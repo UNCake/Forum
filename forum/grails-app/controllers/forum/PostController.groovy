@@ -13,7 +13,8 @@ class PostController {
     }
 
     def index() {
-        redirect action: "list"
+        //redirect action: "list"
+        [postList: Post.findAll()]
     }
 
     def list(){
@@ -61,7 +62,8 @@ class PostController {
     }
     def delete(){
         try {
-
+            def borrado = Post.findWhere(id:params.id)
+            borrado.delete()
         }catch (Exception e) {
             log.error ('No se pudo borrar', e)
         }

@@ -22,8 +22,6 @@ class ForumController {
     }
 
     def create(){
-        print "Jueputa vida"
-        print(params)
         this.getActionName()
         try {
             def forum = new Forum(params)
@@ -31,7 +29,11 @@ class ForumController {
         }catch (Exception e) {
             log.error ('No se pudo crear el Foro', e)
         }
+<<<<<<< HEAD
         render "algo"
+=======
+        redirect(controller: 'forum', action: 'index')
+>>>>>>> b84d1e249d9533adca12d1acb03bf6ffaa6f3441
     }
     def read(){
         try {
@@ -49,7 +51,8 @@ class ForumController {
     }
     def delete(){
         try {
-
+            def borrado = Forum.findWhere(id:params.id)
+            borrado.delete()
         }catch (Exception e) {
             log.error ('No se pudo borrar', e)
         }

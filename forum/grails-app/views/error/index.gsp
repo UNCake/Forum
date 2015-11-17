@@ -15,18 +15,6 @@
 </head>
 
 <body>
-<script>
-    function createBtn() {
-        el = document.getElementById("createForm");
-        //console.log(document.getElementById("diagNombre").innerHTML);
-        el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-    }
-    function searchBtn() {
-        el = document.getElementById("buscarForm");
-        //console.log(document.getElementById("diagNombre").innerHTML);
-        el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-    }
-</script>
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <div class="navbar-header page-scroll">
@@ -37,7 +25,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand page-scroll" href="../home">UNCakeForum</a>
+            <a class="navbar-brand page-scroll" href="home">UNCakeForum</a>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -55,39 +43,25 @@
 
         <div class="row">
             <br><br><br>
-            <h3 style="color: #333;">Foro</h3>
+            <h3 style="color: #333;">Bienvenido</h3>
             <br><br>
         </div>
 
     </div>
 </header>
 <div class="row">
-
     <div class="col-sm-12" style="border-style: solid;">
         <div class="col-md-6" style="border-style: solid;"><br>Bienvenido Alejandro<br><br></div>
-        <div class="col-md-3"><button style="display: block; width: 100%;" onclick="createBtn()"><br>Crear<br><br></button></div>
-        <div class="col-md-3"><button style="display: block; width: 100%;" onclick="searchBtn()"><br>Consultar<br><br></button></div>
+        <div class="col-md-2" style="border-style: solid;"><br>Mi Perfil<br><br></div>
+        <div class="col-md-2" style="border-style: solid;"><br>Mis Posts<br><br></div>
+        <div class="col-md-2" style="border-style: solid;"><br>Logout<br><br></div>
     </div>
 </div>
 <div class="row">
-
-    <div class="col-sm-12" id="buscarForm" style="border-style: solid;">
-        <div class="col-md-4 col-sm-6 portfolio-item">
-            <table class="table table-bordered">
-                <tr>
-                    <th>Nombre</th>
-                    <th>Categoria</th>
-                    <th>Borrar</th>
-                </tr>
-                <g:each in="${forumList}" var="p">
-                <tr>
-                    <td>${p.name}</td>
-                    <td>${p.category}</td>
-                    <td><g:link action="delete" id="${p.id}">Borrar</g:link></td>
-                </tr>
-                </g:each>
-            </table>
-        </div>
+    <div class="col-sm-12" style="border-style: solid;">
+        <br>
+        <h1 class="text-center">Error. La pagina solicitada no existe.</h1>
+        <br>
     </div>
 </div>
 <div class="row">
