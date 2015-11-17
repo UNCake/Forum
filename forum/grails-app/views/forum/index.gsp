@@ -16,8 +16,15 @@
 
 <body>
 <script>
-    function overlay() {
-        console.log("casa")
+    function createBtn() {
+        el = document.getElementById("createForm");
+        //console.log(document.getElementById("diagNombre").innerHTML);
+        el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+    }
+    function searchBtn() {
+        el = document.getElementById("buscarForm");
+        //console.log(document.getElementById("diagNombre").innerHTML);
+        el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
     }
 </script>
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -58,50 +65,34 @@
 
     <div class="col-sm-12" style="border-style: solid;">
         <div class="col-md-6" style="border-style: solid;"><br>Bienvenido Alejandro<br><br></div>
-        <div class="col-md-3"><button style="display: block; width: 100%;" onclick="overlay()"><br>Crear<br><br></button></div>
-        <div class="col-md-3" style="border-style: solid;"><br>Consultar<br><br></div>
+        <div class="col-md-3"><button style="display: block; width: 100%;" onclick="createBtn()"><br>Crear<br><br></button></div>
+        <div class="col-md-3"><button style="display: block; width: 100%;" onclick="searchBtn()"><br>Consultar<br><br></button></div>
     </div>
 </div>
 <div class="row">
-    <div class="col-sm-12" style="border-style: solid;">
-        <div class="col-md-6">
-            <br>
-            <form style="border-style: solid;">
-                <br>
-                <p class="text-center">Bienvenido a la aplicación forum 2.0</p>
-                <br>
-                <g:link action="loadFile" controller="myController">Load File</g:link>
-                <p class="text-left" style="position: relative; left: 30px;">Consultar:</p>
-                <p class="text-left" href="forum" style="position: relative; left: 30px;">Foros</p>
-                <p class="text-left" style="position: relative; left: 30px;">Usuarios</p>
-                <p class="text-left" style="position: relative; left: 30px;">Entradas (Post)</p>
-                <p class="text-left" style="position: relative; left: 30px;">Archivos</p>
-                <br>
-                <br>
-            </form>
-        </div>
-        <div class="col-md-3">
-            <br>
-            <form style="border-style: solid;">
-                <br>
-                <p class="text-center">Ultimas entradas (Post)</p>
-                <br>
-                <textarea class="form-control" style="position: relative; left: 10px; width: 285px; height: 171px;" rows="3"></textarea>
-                <br>
-                <br>
-            </form>
-        </div>
-        <div class="col-md-3">
-            <br>
-            <form style="border-style: solid;">
-                <br>
-                <p class="text-center">Foros con mas entradas</p>
-                <br>
-                <textarea class="form-control" style="position: relative; left: 10px; width: 285px; height: 171px;" rows="3"></textarea>
-                <br>
-                <br>
-            </form>
-        </div>
+    <div class="col-sm-12" id="createForm" style="border-style: solid;">
+        <g:form name="myForm" url="[controller:'forum',action:'create']" class="form-signin">
+            <h2 class="form-signin-heading " align="center">Registrate ya!</h2>
+            <div class="form-group">
+                <label class="sr-only">Nombre</label>
+                <input type="text" id="inputText" class="form-control" placeholder="Nombre" required name="name">
+            </div>
+            <div class="form-group" >
+                <label class="sr-only">Correo electrónico</label>
+                <input type="text" class="form-control" placeholder="Correo electrónico" required name="category"  >
+            </div>
+            <button class="btn btn-lg btn-primary btn-block color-black" controller="forum" action="create" type="submit">Registrarse</button>
+        </g:form>
+    </div>
+    <div class="col-sm-12" id="buscarForm" style="border-style: solid;">
+        <g:each in="${forumList}" var="p">
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <div class="portfolio-caption">
+                    <h4>${p.name}</h4><small>${p.category}</small>
+
+                </div>
+            </div>
+        </g:each>
     </div>
 </div>
 <div class="row">

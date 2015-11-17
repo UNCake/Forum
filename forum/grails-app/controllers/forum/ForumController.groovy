@@ -5,15 +5,16 @@ import grails.converters.JSON
 class ForumController {
 
     def beforeInterceptor = {
-        log.trace("Se va a ejecutar la acci�n $actionName")
+        log.trace("Se va a ejecutar la acción $actionName")
     }
 
     def afterInterceptor = { model ->
-        log.trace("Se ha ejecutado la acci�n $actionName")
+        log.trace("Se ha ejecutado la acción $actionName")
     }
 
     def index() {
         //redirect action: "list"
+        [forumList: Forum.findAll()]
     }
 
     def list(){
@@ -21,6 +22,8 @@ class ForumController {
     }
 
     def create(){
+        print "Jueputa vida"
+        print(params)
         this.getActionName()
         try {
             def forum = new Forum(params)
