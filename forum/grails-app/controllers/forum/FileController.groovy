@@ -25,7 +25,6 @@ class FileController {
     }
 
     def index() {
-        redirect action: "list"
     }
 
     def list(){
