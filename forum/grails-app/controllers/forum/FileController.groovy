@@ -25,6 +25,7 @@ class FileController {
     }
 
     def index() {
+        render(view:'index', model: [fileList: File.findAll()])
     }
 
     def list(){

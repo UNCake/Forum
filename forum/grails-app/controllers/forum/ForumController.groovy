@@ -14,7 +14,7 @@ class ForumController {
 
     def index() {
         //redirect action: "list"
-        [forumList: Forum.findAll()]
+        render(view:'index', model: [forumList: Forum.findAll()])
     }
 
     def list(){
@@ -31,6 +31,7 @@ class ForumController {
         }catch (Exception e) {
             log.error ('No se pudo crear el Foro', e)
         }
+        render "algo"
     }
     def read(){
         try {

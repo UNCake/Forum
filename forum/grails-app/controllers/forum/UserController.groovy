@@ -13,6 +13,7 @@ class UserController {
     }
 
     def index() {
+        render(view:'index', model: [userList: User.findAll()])
     }
 
     def list(){

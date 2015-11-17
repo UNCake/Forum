@@ -75,13 +75,13 @@
             <h2 class="form-signin-heading " align="center">Registrate ya!</h2>
             <div class="form-group">
                 <label class="sr-only">Nombre</label>
-                <input type="text" id="inputText" class="form-control" placeholder="Nombre" required name="name">
+                <g:textField name="name" placeholder="Nombre"></g:textField>
             </div>
             <div class="form-group" >
-                <label class="sr-only">Correo electrónico</label>
-                <input type="text" class="form-control" placeholder="Correo electrónico" required name="category"  >
+                <label class="sr-only">Category</label>
+                <g:textField name="category" placeholder="Category"></g:textField>
             </div>
-            <button class="btn btn-lg btn-primary btn-block color-black" controller="forum" action="create" type="submit">Registrarse</button>
+            <g:actionSubmit value="Enviar"></g:actionSubmit>
         </g:form>
     </div>
     <div class="col-sm-12" id="buscarForm" style="border-style: solid;">
