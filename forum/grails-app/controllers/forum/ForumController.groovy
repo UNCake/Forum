@@ -22,8 +22,6 @@ class ForumController {
     }
 
     def create(){
-        print "Jueputa vida"
-        print(params)
         this.getActionName()
         try {
             def forum = new Forum(params)
@@ -48,7 +46,8 @@ class ForumController {
     }
     def delete(){
         try {
-
+            def borrado = Forum.findWhere(id:params.id)
+            borrado.delete()
         }catch (Exception e) {
             log.error ('No se pudo borrar', e)
         }

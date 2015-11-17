@@ -55,7 +55,7 @@
 
         <div class="row">
             <br><br><br>
-            <h3 style="color: #333;">Foro</h3>
+            <h3 style="color: #333;">Post</h3>
             <br><br>
         </div>
 
@@ -71,15 +71,24 @@
 </div>
 <div class="row">
     <div class="col-sm-12" id="createForm" style="border-style: solid;">
-        <g:form name="myForm" url="[controller:'forum',action:'create']" class="form-signin">
-            <h2 class="form-signin-heading " align="center">Crear Foro</h2>
+        <g:form name="myForm" url="[controller:'post',action:'create']" class="form-signin">
+            <h2 class="form-signin-heading " align="center">Crear Post</h2>
             <div class="form-group">
-                <label class="sr-only">Nombre</label>
-                <input type="text" class="form-control" placeholder="Nombre" required name="name">
+                <label class="sr-only">Topic</label>
+                <input type="text" class="form-control" placeholder="Topic" required name="topic">
             </div>
             <div class="form-group" >
-                <label class="sr-only">Categoria</label>
-                <input type="text" class="form-control" placeholder="Categoria" required name="category"  >
+                <label class="sr-only">Comment</label>
+                <input type="text" class="form-control" placeholder="Comment" required name="comment"  >
+            </div>
+            <div class="form-group">
+                <label class="sr-only">Rate</label>
+                <input type="text" class="form-control" placeholder="Rate" required name="rate">
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox"> Allowed
+                </label>
             </div>
             <button class="btn btn-lg btn-primary btn-block color-black" type="submit">Guardar</button>
         </g:form>
@@ -88,16 +97,21 @@
         <div class="col-md-4 col-sm-6 portfolio-item">
             <table class="table table-bordered">
                 <tr>
-                    <th>Nombre</th>
-                    <th>Categoria</th>
-                    <th>Borrar</th>
+                    <th>Topic</th>
+                    <th>DateCreated</th>
+                    <th>LastUpdate</th>
+                    <th>Comments</th>
+                    <th>Rate</th>
                 </tr>
-                <g:each in="${forumList}" var="p">
-                <tr>
-                    <td>${p.name}</td>
-                    <td>${p.category}</td>
-                    <td><g:link action="delete" id="${p.id}">Borrar</g:link></td>
-                </tr>
+                <g:each in="${postList}" var="p">
+                    <tr>
+                        <td>${p.topic}</td>
+                        <td>${p.dateCreated}</td>
+                        <td>${p.lastupdate}</td>
+                        <td>${p.comments}</td>
+                        <td>${p.rate}</td>
+                        <td><g:link action="delete" id="${p.id}">Borrar</g:link></td>
+                    </tr>
                 </g:each>
             </table>
         </div>

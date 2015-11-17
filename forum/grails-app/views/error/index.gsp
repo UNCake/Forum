@@ -58,46 +58,9 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-sm-12" style="border-style: solid;">
-        <div class="col-md-6">
-            <br>
-            <form style="border-style: solid;">
-                <br>
-                <p class="text-center">Bienvenido a la aplicación forum 2.0</p>
-                <br>
-                <p class="text-left" style="position: relative; left: 30px;">Consultar:</p>
-
-                <p class="text-left" href="forum" style="position: relative; left: 30px;"><g:link action="index" controller="forum">Foros</g:link></p>
-                <p class="text-left" href="forum" style="position: relative; left: 30px;"><g:link action="index" controller="user">Usuarios</g:link></p>
-                <p class="text-left" href="forum" style="position: relative; left: 30px;"><g:link action="index" controller="post">Entradas (Post)</g:link></p>
-                <p class="text-left" href="forum" style="position: relative; left: 30px;"><g:link action="index" controller="file">Archivos</g:link></p>
-                <br>
-                <br>
-            </form>
-        </div>
-        <div class="col-md-3">
-            <br>
-            <form style="border-style: solid;">
-                <br>
-                <p class="text-center">Ultimas entradas (Post)</p>
-                <br>
-                <textarea class="form-control" style="position: relative; left: 10px; width: 285px; height: 171px;" rows="3"></textarea>
-                <br>
-                <br>
-            </form>
-        </div>
-        <div class="col-md-3">
-            <br>
-            <form style="border-style: solid;">
-                <br>
-                <p class="text-center">Foros con mas entradas</p>
-                <br>
-                <textarea class="form-control" style="position: relative; left: 10px; width: 285px; height: 171px;" rows="3"></textarea>
-                <br>
-                <br>
-            </form>
-        </div>
-    </div>
+    <br>
+    <h1>Error. La pagina solicitada no existe.</h1>
+    <br>
 </div>
 <div class="row">
     <p class="text-center">Aplicación realizada por:</p>
